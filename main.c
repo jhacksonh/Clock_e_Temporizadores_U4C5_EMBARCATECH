@@ -21,13 +21,13 @@ void ConfigPins(uint pin, bool InorOut){
 }
 
 void Signal(){
-    printf("Mudando Cor do Sinal...\n");
     information = informations[INDEX];
     for (int i = 0; i < 3; i++)gpio_put(PINS_RGB[i], i!=INDEX?0:1);
     INDEX = INDEX<2?INDEX+1:0;
 }
 
 bool repeating_timer_callback(struct repeating_timer *t) {
+    printf("Mudando Cor do Sinal...\n");
     Signal();
     return true;
 }
@@ -40,7 +40,7 @@ int main(){
     add_repeating_timer_ms(TIMER_ACTIVE_MS, repeating_timer_callback, NULL, &timer);
 
     while (1){
-        sleep_ms(1000);
         printf("%s\n",information);
+        sleep_ms(1000);
     }
 }
