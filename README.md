@@ -4,9 +4,6 @@
 
 Este projeto simula um semáforo usando o microcontrolador **Raspberry Pi Pico W**. Três LEDs (vermelho, amarelo e verde) representam as luzes do semáforo, mudando de cor a cada **3 segundos**. Além disso, o microcontrolador exibe mensagens na porta serial para indicar o estado atual do semáforo.
 
-## Link Para Vídeo Demonstrativo
-(clique aqui para assistir -> ainda será adicionado)
-
 ## Componentes Utilizados
 
 - **Raspberry Pi Pico W** (microcontrolador)
